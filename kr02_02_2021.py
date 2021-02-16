@@ -49,13 +49,15 @@ def task_4_3(words):
 
 
 def task_5(lst1, lst2):
-    """
-        Здесь должен быть ваш код.
-        Переменные lst1 и lst2 - два данных списка.
-        Финальное значение должно быть помещено в переменную diff.
-        """
-
-    pass
+    diff = []
+    set2 = set(lst2)
+    for i in range(len(lst1)):
+        if lst1[i] not in set2:
+            diff.extend(str(lst1[i]))
+        else:
+            continue
+    print(sorted(diff))
+    return diff
 
 
 def task_6(lst):
